@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bniw22ytx13o0"]
+
+[ext_resource type="Texture2D" uid="uid://ouebyvuywn6l" path="res://assets/sprites/colors/white.png" id="1_jm5ho"]
+[ext_resource type="Script" path="res://scripts/interactable.gd" id="2_q41kd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enqmn"]
+atlas = ExtResource("1_jm5ho")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgyyc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enqmn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rpy8"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfexo"]
+size = Vector2(16, 16)
+
+[node name="Interactable" type="Area2D"]
+collision_mask = 2
+priority = 1
+script = ExtResource("2_q41kd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dgyyc")
+autoplay = "default"
+
+[node name="InteractableArea" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0rpy8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Collider" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_rfexo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

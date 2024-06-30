@@ -1,0 +1,52 @@
+{
+  "bees": [
+	{
+	  "name": "Forest",
+	  "lifespan": "Short",
+	  "speed": "Slowest",
+	  "pollination": "Slowest",
+	  "fertility": 2,
+	  "temperatureTolerance": "None",
+	  "humidityTolerance": "None",
+	  "nocturnal": false,
+	  "flyer": false,
+	  "caveDwelling": false
+	},
+	{
+	  "name": "Meadows",
+	  "lifespan": "Short",
+	  "speed": "Slowest",
+	  "pollination": "Slowest",
+	  "fertility": 2,
+	  "temperatureTolerance": "None",
+	  "humidityTolerance": "None",
+	  "nocturnal": false,
+	  "flyer": false,
+	  "caveDwelling": false
+	},
+	{
+	  "name": "Desert",
+	  "lifespan": "Short",
+	  "speed": "Slowest",
+	  "pollination": "Slowest",
+	  "fertility": 2,
+	  "temperatureTolerance": "Up 1",
+	  "humidityTolerance": "None",
+	  "nocturnal": false,
+	  "flyer": true,
+	  "caveDwelling": false
+	},
+	{
+	  "name": "Wintry",
+	  "lifespan": "Short",
+	  "speed": "Slowest",
+	  "pollination": "Slowest",
+	  "fertility": 4,
+	  "temperatureTolerance": "Down 2",
+	  "humidityTolerance": "None",
+	  "nocturnal": false,
+	  "flyer": false,
+	  "caveDwelling": false
+	}
+  ]
+}

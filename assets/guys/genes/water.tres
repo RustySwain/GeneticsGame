@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Genes" load_steps=2 format=3 uid="uid://kpm38ux10cpg"]
+
+[ext_resource type="Script" path="res://scripts/genes.gd" id="1_lmq07"]
+
+[resource]
+script = ExtResource("1_lmq07")
+Species = 6
+Temperature = 2
+TemperatureTolerance = 0
+Humidity = 2
+HumidityTolerance = 1
+Lifespan = 7
+Speed = 6
+Pollination = 0
+Flowers = 0
+Fertility = 2
+Area = 3
+Day = true
+Night = false
+Rain = true
+Cave = true

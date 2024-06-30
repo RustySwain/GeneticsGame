@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Genes" load_steps=2 format=3 uid="uid://c4c2q8gu45bbl"]
+
+[ext_resource type="Script" path="res://scripts/genes.gd" id="1_4a6q8"]
+
+[resource]
+script = ExtResource("1_4a6q8")
+Species = 2
+Temperature = 4
+TemperatureTolerance = 1
+Humidity = 0
+HumidityTolerance = 1
+Lifespan = 6
+Speed = 5
+Pollination = 0
+Flowers = 0
+Fertility = 2
+Area = 0
+Day = true
+Night = true
+Rain = false
+Cave = false
