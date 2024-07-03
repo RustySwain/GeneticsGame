@@ -22,6 +22,7 @@ func MutateFromSpecies(pa, pi, da, di):
 	#add mutations
 	if pureRandom[0] != pureRandom[1]:
 		#TODO: read mutations from a config file.
+		
 		pass
 	return pureRandom
 

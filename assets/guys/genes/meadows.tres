@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_f5oip")
-Species = 1
+Species = "Meadows"
 Temperature = 2
 TemperatureTolerance = 0
 Humidity = 1

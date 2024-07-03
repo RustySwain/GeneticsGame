@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LilGuy" load_steps=3 format=3 uid="uid://b3p667y30vyim"]
+
+[ext_resource type="Script" path="res://scripts/lilguy.gd" id="1_dppkn"]
+[ext_resource type="Resource" uid="uid://8py0ycrf2od6" path="res://assets/guys/genes/meadows.tres" id="1_f5dwx"]
+
+[resource]
+script = ExtResource("1_dppkn")
+Type = 1
+activeGenes = ExtResource("1_f5dwx")
+inactiveGenes = ExtResource("1_f5dwx")

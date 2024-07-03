@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Mutation" load_steps=2 format=3 uid="uid://ckycj4nfb2q5q"]
+
+[ext_resource type="Script" path="res://scripts/mutation.gd" id="1_5ycff"]
+
+[resource]
+script = ExtResource("1_5ycff")
+InputSpecies = Array[String](["Forest", "Meadows", "Desert", "Stone", "Snow"])
+OutputSpecies = "Common"
+PercentChance = 15

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Genes" load_steps=2 format=3 uid="uid://cpdw3tbqpps8l"]
+
+[ext_resource type="Script" path="res://scripts/genes.gd" id="1_yut2b"]
+
+[resource]
+script = ExtResource("1_yut2b")
+Species = "Snow"
+Temperature = 0
+TemperatureTolerance = 1
+Humidity = 1
+HumidityTolerance = 0
+Lifespan = 6
+Speed = 5
+Pollination = 0
+Fertility = 4
+Day = true
+Night = false
+Cave = false

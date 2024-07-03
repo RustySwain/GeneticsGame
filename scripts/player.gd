@@ -2,7 +2,10 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 
-var guiOpened
+var guiOpened : String
+var guiJustClosed : bool
+
+@export var Huds : Dictionary
 
 func _physics_process(_delta: float) -> void:
 	# Movement Input.
@@ -16,15 +19,21 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	# Inventory Input.
-	if guiOpened and Input.is_action_just_pressed("interact"):
+	if guiOpened and !guiJustClosed and Input.is_action_just_pressed("interact"):
 		closeGUI(guiOpened)
+	else:
+		guiJustClosed = false
 
-func closeGUI(guiToClose):
-	guiToClose.visible = false
-	guiToClose = false
+func closeGUI(guiToClose : String):
+	get_node(Huds[guiToClose]).visible = false
+	guiOpened = ""
+	guiJustClosed = true
 
-func openGUI(guiToOpen):
-	if guiOpened:
+func openGUI(guiToOpen : String):
+	if guiToOpen == "":
+		pass
+	if guiOpened != "":
 		closeGUI(guiOpened)
-	guiOpened = guiToOpen
-	guiOpened.visible = true
+	elif !guiJustClosed:
+		guiOpened = guiToOpen
+		get_node(Huds[guiOpened]).visible = true
