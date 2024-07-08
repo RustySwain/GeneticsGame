@@ -20,7 +20,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	# Inventory Input.
-	if guiOpened and !guiJustClosed and Input.is_action_just_pressed("interact"):
+	if guiOpened and !guiJustClosed and (Input.is_action_just_released("interact") or Input.is_action_just_released("ui_escape")):
 		closeGUI(guiOpened)
 	else:
 		guiJustClosed = false

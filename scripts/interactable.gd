@@ -11,5 +11,5 @@ func _on_body_exited(_body: Node2D) -> void:
 	playerInRange = false
 
 func _process(_delta: float) -> void:
-	if playerInRange and Input.is_action_just_pressed("interact"):
+	if playerInRange and Input.is_action_just_released("interact"):
 		player.openGUI(HUDName)
