@@ -6,6 +6,7 @@ var guiOpened : String
 var guiJustClosed : bool
 
 @export var Huds : Dictionary
+@onready var hudsNode : CanvasLayer = %HUDs
 
 func _physics_process(_delta: float) -> void:
 	# Movement Input.
@@ -25,7 +26,7 @@ func _physics_process(_delta: float) -> void:
 		guiJustClosed = false
 
 func closeGUI(guiToClose : String):
-	get_node(Huds[guiToClose]).visible = false
+	hudsNode.get_node(Huds[guiToClose]).visible = false
 	guiOpened = ""
 	guiJustClosed = true
 
@@ -36,4 +37,4 @@ func openGUI(guiToOpen : String):
 		closeGUI(guiOpened)
 	elif !guiJustClosed:
 		guiOpened = guiToOpen
-		get_node(Huds[guiOpened]).visible = true
+		hudsNode.get_node(Huds[guiOpened]).visible = true

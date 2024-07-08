@@ -1,18 +1,58 @@
-[gd_scene load_steps=2 format=3 uid="uid://cju6ulmevaxwa"]
+[gd_scene load_steps=5 format=3 uid="uid://cju6ulmevaxwa"]
 
 [ext_resource type="Texture2D" uid="uid://ouebyvuywn6l" path="res://assets/sprites/colors/white.png" id="1_0shyp"]
+[ext_resource type="Script" path="res://scripts/hive_menu.gd" id="1_swc7i"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="2_4ot5k"]
+[ext_resource type="PackedScene" uid="uid://spdarnsxhi26" path="res://scenes/item_slot.tscn" id="2_dukp2"]
 
 [node name="HiveMenu" type="Control"]
+z_index = 5
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_4ot5k")
 
-[node name="Background" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+script = ExtResource("1_swc7i")
+
+[node name="Background" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
 texture = ExtResource("1_0shyp")
-expand_mode = 2
+
+[node name="ItemSlots" type="Control" parent="MarginContainer/Background"]
+anchors_preset = 0
+
+[node name="InPrincessSlot" parent="MarginContainer/Background/ItemSlots" instance=ExtResource("2_dukp2")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 178.0
+offset_bottom = 178.0
+
+[node name="InDroneSlot" parent="MarginContainer/Background/ItemSlots" instance=ExtResource("2_dukp2")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 50.0
+offset_top = 228.0
+offset_right = 178.0
+offset_bottom = 356.0
+grow_horizontal = 1
+grow_vertical = 1
